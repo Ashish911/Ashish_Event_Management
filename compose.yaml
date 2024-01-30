@@ -18,6 +18,15 @@ services:
         - path: .
           target: /app
           action: sync
-
+    environment:
+      - UPLOADTHING_SECRET=sk_live_ae1a7e7dc7f6d15243415ee6cef15a5ff8863afc73a37d1894ce24eede94824f
+      - UPLOADTHING_APP_ID=zrjflmc0yv
+      - NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_ZGVmaW5pdGUtc3RhcmZpc2gtMTguY2xlcmsuYWNjb3VudHMuZGV2JA
+      - CLERK_SECRET_KEY=sk_test_Qa2plORV6eGamCOtMdhOyHHwalSnOsUYnf9n4UvJoJ
+      - NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+      - NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+      - NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/
+      - NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/
+      - MONGODB_URI=mongodb://localhost:27017/
 volumes:
   tasked:
