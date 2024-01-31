@@ -103,14 +103,13 @@ export type Event = {
 // ====== CATEGORY PARAMS
 export type CreateCategoryParams = {
   categoryName: string;
-  path: string;
 };
 
 // ====== ORDER PARAMS
 export type CheckoutOrderParams = {
   eventTitle: string;
   eventId: string;
-  price: string;
+  price?: string;
   isFree: boolean;
   buyerId: string;
 };
