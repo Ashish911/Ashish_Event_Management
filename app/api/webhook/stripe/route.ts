@@ -5,8 +5,12 @@ import { createOrder } from "@/lib/actions/order.action";
 export async function POST(request: Request) {
   const body = await request.text();
 
+  console.log("IN HERE POST");
+
   const sig = request.headers.get("stripe-signature") as string;
   const endpointSecret = process.env.STRIPE_WEBHOOK_SECRET!;
+
+  console.log(endpointSecret);
 
   let event;
 
